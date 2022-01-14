@@ -1,9 +1,14 @@
-const inputRange = document.querySelector('#font-size-control');
+/*function hendleRange() {
+  const inputRange = document.querySelector('#font-size-control');
 
-  const spanText = document.querySelector('#text');
+  const textSpan = document.querySelector('#text');
 
-  inputRange.addEventListener('input', hendleRange);
+  textSpan.style.fontSize = inputRange.value + 'px';
+}*/
+const input = document.querySelector("#font-size-control");
+const span = document.querySelector("#text");
+input.addEventListener("input", handleInputRange);
 
-  function hendleRange() {
-    spanText.style.fontSize = inputRange.value + 'px';
-  }
+function handleInputRange(event) {
+  span.style.fontSize = event.currentTarget.value + "px";
+}
